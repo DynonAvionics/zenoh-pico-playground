@@ -13,8 +13,8 @@ manifest:
   projects:
     - name: zephyr
       remote: zephyrproject-rtos
-      # revision: v3.3.0
-      revision: v3.4.0
+      revision: v3.3.0
+      # revision: v3.4.0
       import:
         # That puts all the zephyr dependencies in ../zephyr-external
         path-prefix: zephyr-external
