@@ -1,0 +1,14 @@
+# Copyright (c) 2021 Legrand North America, LLC.
+# SPDX-License-Identifier: Apache-2.0
+
+menu "Libraries"
+
+# TODO: This is not ideal. We'd prefer to have a Kconfig and a CMakeLists.txt in Zenoh-Pico. That
+# way integrates better with the Zephyr library scheme. But that'll do for now.
+config ZENOH_PICO_LIB
+	bool "Zenoh-Pico Library"
+	help
+	  This option enables the custom_lib library
+
+
+endmenu

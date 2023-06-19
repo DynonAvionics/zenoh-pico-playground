@@ -1,0 +1,15 @@
+# NUCLEO-144 F429ZI 2 board configuration
+
+if BOARD_NUCLEO_F429ZI_2
+
+config BOARD
+	default "nucleo_f429zi_2"
+
+if NETWORKING
+
+config NET_L2_ETHERNET
+	default y
+
+endif # NETWORKING
+
+endif # BOARD_NUCLEO_F429ZI_2

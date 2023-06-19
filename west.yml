@@ -1,0 +1,31 @@
+# Copyright (c) 2021 Nordic Semiconductor ASA
+# SPDX-License-Identifier: Apache-2.0
+
+# More info about west manifests: https://docs.zephyrproject.org/latest/develop/west/manifest.html
+manifest:
+  self:
+    west-commands: scripts/west-commands.yml
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+    - name: dynon
+      url-base: https://github.com/DynonAvionics
+
+  projects:
+    - name: zephyr
+      remote: dynon
+      # dynon-main-5 doesn't work on the g474re. The enc424j600 never comes up for some reason.
+      revision: dynon-main-4
+      # remote: zephyrproject-rtos
+      # revision: v2.7.1
+      import:
+        # That puts all the zephyr dependencies in ../zephyr-external
+        path-prefix: zephyr-external
+        # By using name-allowlist we can clone only the modules that are
+        # strictly needed by the application.
+        name-allowlist:
+          - cmsis      # required by the ARM port
+          - hal_stm32  # required by the nucleo boards (STM32 based)
+          - mbedtls
+    # TODO: It would be great to have zenoh-pico here, maybe? If we decide to move forward with it.
