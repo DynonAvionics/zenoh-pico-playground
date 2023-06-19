@@ -72,7 +72,7 @@ int main(int argc, char **argv) {
     while (true) {
         sleep(5);
 
-        //print_sys_heap();
+        // print_sys_heap();
         // sys_heap_print_info(&_system_heap, false);
 
         // Initialize Zenoh Session and other parameters
@@ -100,7 +100,7 @@ int main(int argc, char **argv) {
         zp_start_lease_task(z_loan(s), NULL);
         printf("OK\n");
 
-        //print_sys_heap();
+        // print_sys_heap();
         // sys_heap_print_info(&_system_heap, false);
 
         printf("Declaring publisher for '%s'...", KEYEXPR);

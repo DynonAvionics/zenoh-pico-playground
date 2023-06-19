@@ -9,16 +9,12 @@ manifest:
   remotes:
     - name: zephyrproject-rtos
       url-base: https://github.com/zephyrproject-rtos
-    - name: dynon
-      url-base: https://github.com/DynonAvionics
 
   projects:
     - name: zephyr
-      remote: dynon
-      # dynon-main-5 doesn't work on the g474re. The enc424j600 never comes up for some reason.
-      revision: dynon-main-4
-      # remote: zephyrproject-rtos
-      # revision: v2.7.1
+      remote: zephyrproject-rtos
+      # revision: v3.3.0
+      revision: v3.4.0
       import:
         # That puts all the zephyr dependencies in ../zephyr-external
         path-prefix: zephyr-external
@@ -28,4 +24,4 @@ manifest:
           - cmsis      # required by the ARM port
           - hal_stm32  # required by the nucleo boards (STM32 based)
           - mbedtls
-    # TODO: It would be great to have zenoh-pico here, maybe? If we decide to move forward with it.
+          # TODO: It would be better to have zenoh-pico here
