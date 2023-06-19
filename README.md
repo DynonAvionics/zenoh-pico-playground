@@ -11,6 +11,9 @@ This project is based off of the [Zephyr Example Application][example_app] and i
 1. Install [host dependencies](https://docs.zephyrproject.org/latest/develop/getting_started/index.html#install-dependencies) has per Zephyr's Getting Started
 2. Install [Zephyr SDK](https://docs.zephyrproject.org/latest/develop/getting_started/index.html#install-zephyr-sdk)
 
+Note: There is probably no need to follow the [Zephyr and Python dependencies](https://docs.zephyrproject.org/latest/develop/getting_started/index.html#get-zephyr-and-install-python-dependencies)
+instructions because Zephyr gets installed when running the `west update` command locally.
+
 ## The fun stuff
 
 ### Building
