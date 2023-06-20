@@ -25,9 +25,17 @@ instructions because Zephyr gets installed when running the `west update` comman
     ```shell
     west init -l
     west update
+    west zephyr-export
     ```
 
-2. From this directory, build the code:
+2. If it's the first time building Zephyr code on your machine, you will need to install Zephyr's
+   Python dependencies.
+
+    ```shell
+    pip3 install -r ../zephyr-external/zephyr/scripts/requirements.txt
+    ```
+
+3. From this directory, build the code:
 
     ```shell
     west build -d build/nucleo_f439zi -b nucleo_f439zi -p always apps/zenoh-session-restart
